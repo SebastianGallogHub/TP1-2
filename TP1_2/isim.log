@@ -1,0 +1,32 @@
+ command line:
+   ./TestTP1_2_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  53613
+
+Tue Oct 01 20:11:13 2019
+
+Total Line Count : 227
+
+ Elaboration time : 0.015625 sec.
+
+ Estimate current memory usage : 158.032 Meg. 
+
+ Total Signals          : 45
+ Total Nets             : 40
+ Total Signal Drivers   : 40
+ Total Blocks           : 7
+ Total Primitive Blocks : 1
+ Total Processes        : 24
+ Total Traceable Variables  : 0
+ Total Scalar Nets and Variables : 40
+ntrace select -o on -n /TestTP1_2/l 
+ntrace select -o on -n /TestTP1_2/p1 
+ntrace select -o on -n /TestTP1_2/p2 
+ntrace select -o on -n /TestTP1_2/clk 
+ntrace select -o on -n /TestTP1_2/r 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+isimrun 10 sec 
