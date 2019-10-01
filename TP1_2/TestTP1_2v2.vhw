@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TestTP1_2v2.vhw
--- /___/   /\     Timestamp : Tue Oct 01 16:28:55 2019
+-- /___/   /\     Timestamp : Tue Oct 01 18:32:27 2019
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -159,7 +159,11 @@ ARCHITECTURE testbench_arch OF TestTP1_2v2 IS
                 WAIT FOR 1000 ns;
                 P2 <= '1';
                 -- -------------------------------------
-                WAIT FOR 1415 ns;
+                -- -------------  Current Time:  8985ns
+                WAIT FOR 200 ns;
+                P2 <= '0';
+                -- -------------------------------------
+                WAIT FOR 1215 ns;
 
             END PROCESS;
 
