@@ -1,4 +1,4 @@
-AR tp1_2 behavioral "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" sub00/vhpl01 1569703993
-EN tp1_2 NULL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" sub00/vhpl00 1569703992
-AR testtp1_2 testbench_arch "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" sub00/vhpl03 1569704351
-EN testtp1_2 NULL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" sub00/vhpl02 1569704350
+AR tp1_2 behavioral "d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" sub00/vhpl01 1569956267
+EN tp1_2 NULL "d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" sub00/vhpl00 1569956266
+AR testtp1_2 testbench_arch "d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" sub00/vhpl03 1569956269
+EN testtp1_2 NULL "d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" sub00/vhpl02 1569956268

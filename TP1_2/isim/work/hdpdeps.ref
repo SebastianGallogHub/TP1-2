@@ -1,19 +1,19 @@
 V3 8
 FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.ant" 2019/09/28.17:02:29 J.36
 FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" 2019/09/28.17:59:05 J.36
-EN work/TestTP1_2 1569704350 \
+EN work/TestTP1_2 1569956268 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" \
       PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
       PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
       PB std/textio 1179176969
-AR work/TestTP1_2/testbench_arch 1569704351 \
+AR work/TestTP1_2/testbench_arch 1569956269 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" \
-      EN work/TestTP1_2 1569704350 CP TP1_2
-FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/09/28.17:50:22 J.36
-EN work/TP1_2 1569703992 \
+      EN work/TestTP1_2 1569956268 CP TP1_2
+FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/10/01.15:56:02 J.36
+EN work/TP1_2 1569956266 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
       PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
       PB ieee/STD_LOGIC_UNSIGNED 1179176991
-AR work/TP1_2/Behavioral 1569703993 \
+AR work/TP1_2/Behavioral 1569956267 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
-      EN work/TP1_2 1569703992
+      EN work/TP1_2 1569956266

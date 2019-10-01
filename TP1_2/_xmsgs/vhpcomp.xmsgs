@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLParsers" num="18" delta="unknown" >File &quot;<arg fmt="%s" index="1">d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd</arg>&quot; is not known.
+</msg>
+
+<msg type="error" file="HDLParsers" num="18" delta="unknown" >File &quot;<arg fmt="%s" index="1">d:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd</arg>&quot; is not known.
+</msg>
+
 </messages>
 

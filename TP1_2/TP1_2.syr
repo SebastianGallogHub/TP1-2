@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
  
 --> Reading design: TP1_2.prj
 
@@ -99,7 +99,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" in Library work.
-Architecture behavioral of Entity tp1_2 is up to date.
+Entity <tp1_2> compiled.
+Entity <tp1_2> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -126,7 +127,7 @@ WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
     Found 32-bit register for signal <CT2>.
     Found 32-bit adder for signal <CT2$share0000>.
     Found 1-bit register for signal <FT2>.
-    Found 32-bit comparator greater for signal <FT2$cmp_gt0000> created at line 103.
+    Found 32-bit comparator greater for signal <FT2$cmp_gt0000> created at line 105.
     Found 1-bit register for signal <Q01>.
     Found 1-bit register for signal <Q02>.
     Found 1-bit register for signal <Q03>.
@@ -231,16 +232,16 @@ Cell Usage :
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 31
-#      LUT2                        : 41
-#      LUT2_D                      : 4
+#      LUT2                        : 38
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
 #      LUT3                        : 9
-#      LUT3_D                      : 2
+#      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 29
-#      LUT4_D                      : 1
-#      LUT4_L                      : 1
+#      LUT4                        : 31
+#      LUT4_L                      : 3
 #      MUXCY                       : 41
-#      MUXF5                       : 3
+#      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 31
 # FlipFlops/Latches                : 46
@@ -259,9 +260,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      65  out of   4656     1%  
+ Number of Slices:                      63  out of   4656     1%  
  Number of Slice Flip Flops:            46  out of   9312     0%  
- Number of 4 input LUTs:               123  out of   9312     1%  
+ Number of 4 input LUTs:               120  out of   9312     1%  
  Number of IOs:                          5
  Number of bonded IOBs:                  5  out of    232     2%  
  Number of GCLKs:                        1  out of     24     4%  
@@ -303,7 +304,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 5.560ns (Maximum Frequency: 179.841MHz)
-   Minimum input arrival time before clock: 7.332ns
+   Minimum input arrival time before clock: 6.207ns
    Maximum output required time after clock: 4.221ns
    Maximum combinational path delay: No path found
 
@@ -314,7 +315,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 5.560ns (frequency: 179.841MHz)
-  Total number of paths / destination ports: 1215 / 91
+  Total number of paths / destination ports: 1157 / 91
 -------------------------------------------------------------------------
 Delay:               5.560ns (Levels of Logic = 33)
   Source:            CT2_1 (FF)
@@ -367,26 +368,26 @@ Delay:               5.560ns (Levels of Logic = 33)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 315 / 58
+  Total number of paths / destination ports: 122 / 58
 -------------------------------------------------------------------------
-Offset:              7.332ns (Levels of Logic = 5)
-  Source:            P1 (PAD)
-  Destination:       CT2_0 (FF)
+Offset:              6.207ns (Levels of Logic = 5)
+  Source:            P2 (PAD)
+  Destination:       Q01 (FF)
   Destination Clock: Clk rising
 
-  Data Path: P1 to CT2_0
+  Data Path: P2 to Q01
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            26   1.106   1.223  P1_IBUF (P1_IBUF)
-     LUT2:I0->O            1   0.612   0.509  CT2_not00012 (CT2_not0001_map2)
-     LUT4:I0->O            1   0.612   0.387  CT2_not00017 (CT2_not0001_map4)
-     LUT4_L:I2->LO         1   0.612   0.103  CT2_not000132_SW0 (N137)
-     LUT4:I3->O           32   0.612   1.073  CT2_not000132 (CT2_not0001)
-     FDCE:CE                   0.483          CT2_0
+     IBUF:I->O            29   1.106   1.224  P2_IBUF (P2_IBUF)
+     LUT4_L:I0->LO         1   0.612   0.103  Q01_mux00001_SW0 (N94)
+     LUT4:I3->O            2   0.612   0.383  Q01_mux00001 (N01)
+     LUT4_L:I3->LO         1   0.612   0.103  Q01_not000133_SW0 (N132)
+     LUT4:I3->O            1   0.612   0.357  Q01_not000133 (Q01_not0001)
+     FDPE:CE                   0.483          Q01
     ----------------------------------------
-    Total                      7.332ns (4.037ns logic, 3.295ns route)
-                                       (55.1% logic, 44.9% route)
+    Total                      6.207ns (4.037ns logic, 2.170ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
@@ -408,11 +409,11 @@ Offset:              4.221ns (Levels of Logic = 1)
                                        (87.3% logic, 12.7% route)
 
 =========================================================================
-CPU : 4.57 / 4.75 s | Elapsed : 4.00 / 4.00 s
+CPU : 6.42 / 6.59 s | Elapsed : 6.00 / 7.00 s
  
 --> 
 
-Total memory usage is 221060 kilobytes
+Total memory usage is 220356 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
