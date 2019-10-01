@@ -1,16 +1,16 @@
  command line:
-   ./TestTP1_2_isim_beh.exe
+   ./TestTP1_2v2_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50590
+     -ipcport  53165
 
-Sat Sep 28 17:59:12 2019
+Tue Oct 01 16:29:12 2019
 
-Total Line Count : 260
+Total Line Count : 251
 
  Elaboration time : 0 sec.
 
- Estimate current memory usage : 157.7 Meg. 
+ Estimate current memory usage : 158.175 Meg. 
 
  Total Signals          : 45
  Total Nets             : 40
@@ -20,21 +20,23 @@ Total Line Count : 260
  Total Processes        : 24
  Total Traceable Variables  : 0
  Total Scalar Nets and Variables : 40
-ntrace select -o on -n /TestTP1_2/l 
-ntrace select -o on -n /TestTP1_2/p1 
-ntrace select -o on -n /TestTP1_2/p2 
-ntrace select -o on -n /TestTP1_2/clk 
-ntrace select -o on -n /TestTP1_2/r 
+ntrace select -o on -n /TestTP1_2v2/l 
+ntrace select -o on -n /TestTP1_2v2/p1 
+ntrace select -o on -n /TestTP1_2v2/p2 
+ntrace select -o on -n /TestTP1_2v2/clk 
+ntrace select -o on -n /TestTP1_2v2/r 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+restart
 isimrun 10000 ns 
-isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 
- Simulation time 0.09375 sec.
+ Simulation time 0.015625 sec.
 
- Estimate current memory usage : 163.336 Meg. 
+ Estimate current memory usage : 170.889 Meg. 
 
-Sat Sep 28 18:01:47 2019
+Tue Oct 01 16:29:28 2019
 

@@ -1,3 +1,6 @@
 run 1000 ns
+isimrun all
+stop -s
+run 10000 ns
 run 10000 ns
 exit
