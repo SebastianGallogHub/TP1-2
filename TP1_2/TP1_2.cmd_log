@@ -10,3 +10,4 @@ xst -ise "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.ise" -int
 xst -ise "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.ise" -intstyle ise -ifn TP1_2.xst -ofn TP1_2.syr
 xst -ise "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.ise" -intstyle ise -ifn TP1_2.xst -ofn TP1_2.syr
 xst -ise "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.ise" -intstyle ise -ifn TP1_2.xst -ofn TP1_2.syr
+xst -ise "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.ise" -intstyle ise -ifn TP1_2.xst -ofn TP1_2.syr

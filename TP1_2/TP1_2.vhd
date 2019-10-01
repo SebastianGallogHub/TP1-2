@@ -102,7 +102,7 @@ architecture Behavioral of TP1_2 is
 					if Q06 = '1' then CT2 <= CT2 + 1; end if;
 					if Q07 = '1' then CT2 <= CT2 + 1; end if;
 					
-					if CT2 > 6 then FT2 <= '1'; else FT2 <= '0'; end if; --Se consideran 4 bit-time, 1 seg
+					if CT2 > 2 then FT2 <= '1'; else FT2 <= '0'; end if; --Se consideran 4 bit-time, 1 seg
 				end if;
 		end process;
 		

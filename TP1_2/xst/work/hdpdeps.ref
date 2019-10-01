@@ -1,9 +1,9 @@
 V3 3
-FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/10/01.16:23:43 J.36
-EN work/TP1_2 1569965331 \
+FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/10/01.20:08:58 J.36
+EN work/TP1_2 1569971358 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/TP1_2/Behavioral 1569965332 \
+AR work/TP1_2/Behavioral 1569971359 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
-      EN work/TP1_2 1569965331
+      EN work/TP1_2 1569971358

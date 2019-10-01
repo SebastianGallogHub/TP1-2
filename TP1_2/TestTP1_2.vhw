@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
---  /   /         Filename : TestTP1_2v2.vhw
--- /___/   /\     Timestamp : Tue Oct 01 18:32:27 2019
+--  /   /         Filename : TestTP1_2.vhw
+-- /___/   /\     Timestamp : Tue Oct 01 20:13:57 2019
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TestTP1_2v2
+--Design Name: TestTP1_2
 --Device: Xilinx
 --
 
@@ -24,10 +24,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TestTP1_2v2 IS
-END TestTP1_2v2;
+ENTITY TestTP1_2 IS
+END TestTP1_2;
 
-ARCHITECTURE testbench_arch OF TestTP1_2v2 IS
+ARCHITECTURE testbench_arch OF TestTP1_2 IS
     FILE RESULTS: TEXT OPEN WRITE_MODE IS "results.txt";
 
     COMPONENT TP1_2
@@ -46,9 +46,9 @@ ARCHITECTURE testbench_arch OF TestTP1_2v2 IS
     SIGNAL Clk : std_logic := '0';
     SIGNAL R : std_logic := '0';
 
-    constant PERIOD : time := 200 ns;
+    constant PERIOD : time := 500 ms;
     constant DUTY_CYCLE : real := 0.5;
-    constant OFFSET : time := 100 ns;
+    constant OFFSET : time := 1 ms;
 
     BEGIN
         UUT : TP1_2
@@ -73,97 +73,73 @@ ARCHITECTURE testbench_arch OF TestTP1_2v2 IS
 
         PROCESS
             BEGIN
-                -- -------------  Current Time:  100ns
-                WAIT FOR 100 ns;
+                -- -------------  Current Time:  1ms
+                WAIT FOR 1 ms;
                 R <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  185ns
-                WAIT FOR 85 ns;
+                -- -------------  Current Time:  250ms
+                WAIT FOR 249 ms;
                 R <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  385ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  750ms
+                WAIT FOR 500 ms;
                 P1 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  585ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  1250ms
+                WAIT FOR 500 ms;
                 P1 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  985ns
-                WAIT FOR 400 ns;
+                -- -------------  Current Time:  1750ms
+                WAIT FOR 500 ms;
                 P1 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  1185ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  2250ms
+                WAIT FOR 500 ms;
                 P1 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1585ns
-                WAIT FOR 400 ns;
+                -- -------------  Current Time:  3250ms
+                WAIT FOR 1000 ms;
                 P2 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  1785ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  3750ms
+                WAIT FOR 500 ms;
                 P2 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1985ns
-                WAIT FOR 200 ns;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  2185ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  4750ms
+                WAIT FOR 1000 ms;
                 P1 <= '1';
-                P2 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  2385ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  9250ms
+                WAIT FOR 4500 ms;
+                P1 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  10250ms
+                WAIT FOR 1000 ms;
+                P1 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  10750ms
+                WAIT FOR 500 ms;
                 P1 <= '0';
                 P2 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  2585ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  11250ms
+                WAIT FOR 500 ms;
+                P1 <= '1';
                 P2 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  3385ns
-                WAIT FOR 800 ns;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  3585ns
-                WAIT FOR 200 ns;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  4185ns
-                WAIT FOR 600 ns;
-                P1 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  6585ns
-                WAIT FOR 2400 ns;
+                -- -------------  Current Time:  11750ms
+                WAIT FOR 500 ms;
                 P1 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  7185ns
-                WAIT FOR 600 ns;
+                -- -------------  Current Time:  14750ms
+                WAIT FOR 3000 ms;
                 P1 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  7385ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  15250ms
+                WAIT FOR 500 ms;
                 P1 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  7585ns
-                WAIT FOR 200 ns;
-                P1 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  7785ns
-                WAIT FOR 200 ns;
-                P1 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  8785ns
-                WAIT FOR 1000 ns;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  8985ns
-                WAIT FOR 200 ns;
-                P2 <= '0';
-                -- -------------------------------------
-                WAIT FOR 1215 ns;
+                WAIT FOR 5250 ms;
 
             END PROCESS;
 

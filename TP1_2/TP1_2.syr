@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.15 s | Elapsed : 0.00 / 0.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.15 s | Elapsed : 0.00 / 0.00 s
  
 --> Reading design: TP1_2.prj
 
@@ -99,8 +99,7 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" in Library work.
-Entity <tp1_2> compiled.
-Entity <tp1_2> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity tp1_2 is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -228,11 +227,11 @@ Design Statistics
 # IOs                              : 5
 
 Cell Usage :
-# BELS                             : 200
+# BELS                             : 202
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 31
-#      LUT2                        : 38
+#      INV                         : 5
+#      LUT1                        : 32
+#      LUT2                        : 37
 #      LUT2_D                      : 1
 #      LUT2_L                      : 1
 #      LUT3                        : 9
@@ -240,7 +239,7 @@ Cell Usage :
 #      LUT3_L                      : 1
 #      LUT4                        : 31
 #      LUT4_L                      : 3
-#      MUXCY                       : 41
+#      MUXCY                       : 42
 #      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 31
@@ -260,9 +259,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      63  out of   4656     1%  
+ Number of Slices:                      64  out of   4656     1%  
  Number of Slice Flip Flops:            46  out of   9312     0%  
- Number of 4 input LUTs:               120  out of   9312     1%  
+ Number of 4 input LUTs:               121  out of   9312     1%  
  Number of IOs:                          5
  Number of bonded IOBs:                  5  out of    232     2%  
  Number of GCLKs:                        1  out of     24     4%  
@@ -409,7 +408,7 @@ Offset:              4.221ns (Levels of Logic = 1)
                                        (87.3% logic, 12.7% route)
 
 =========================================================================
-CPU : 6.42 / 6.59 s | Elapsed : 6.00 / 7.00 s
+CPU : 5.67 / 6.01 s | Elapsed : 6.00 / 6.00 s
  
 --> 
 
