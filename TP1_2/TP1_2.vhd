@@ -75,31 +75,33 @@ architecture Behavioral of TP1_2 is
 					FT2 <= '0';
 				elsif (Clk = '1' and Clk'event) then 
 					if TR01 = '1' then Q02 <= '1'; Q01 <= '0'; end if;
---					if TR02 = '1' then Q03 <= '1'; Q01 <= '0'; end if; 
---					if TR03 = '1' then Q04 <= '1'; Q02 <= '0'; end if; 
---					if TR04 = '1' then Q05 <= '1'; Q03 <= '0'; end if; 
---					if TR05 = '1' then Q06 <= '1'; Q04 <= '0'; end if;
---					if TR06 = '1' then Q07 <= '1'; Q05 <= '0'; end if; 
---					if TR07 = '1' then Q08 <= '1'; Q06 <= '0'; CT2 <= 0; FT2 <= '0'; end if; 
---					if TR08 = '1' then Q08 <= '1'; Q07 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR09 = '1' then Q09 <= '1'; Q08 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR10 = '1' then Q01 <= '1'; Q09 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR11 = '1' then Q11 <= '1'; Q03 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR12 = '1' then Q01 <= '1'; Q11 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR13 = '1' then Q10 <= '1'; Q02 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR14 = '1' then Q01 <= '1'; Q10 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR15 = '1' then Q01 <= '1'; Q05 <= '0'; CT2 <= 0; FT2 <= '0'; end if; 
---					if TR16 = '1' then Q01 <= '1'; Q04 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR17 = '1' then Q13 <= '1'; Q07 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR18 = '1' then Q01 <= '1'; Q13 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR19 = '1' then Q12 <= '1'; Q06 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if TR20 = '1' then Q01 <= '1'; Q12 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
---					if Q02 = '1' then CT2 <= CT2 + 1; end if;
---					if Q03 = '1' then CT2 <= CT2 + 1; end if;
---					if Q04 = '1' then CT2 <= CT2 + 1; end if;
---					if Q05 = '1' then CT2 <= CT2 + 1; end if;
---					if Q06 = '1' then CT2 <= CT2 + 1; end if;
---					if Q07 = '1' then CT2 <= CT2 + 1; end if;
+					if TR02 = '1' then Q04 <= '1'; Q02 <= '0'; end if;
+					if TR03 = '1' then Q06 <= '1'; Q04 <= '0'; end if;
+					if TR04 = '1' then Q08 <= '1'; Q06 <= '0'; end if;
+					if TR05 = '1' then Q09 <= '1'; Q08 <= '0'; end if;
+					if TR06 = '1' then Q01 <= '1'; Q09 <= '0'; end if;
+					if TR07 = '1' then Q12 <= '1'; Q06 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR08 = '1' then Q01 <= '1'; Q12 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR09 = '1' then Q01 <= '1'; Q04 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR10 = '1' then Q10 <= '1'; Q02 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR11 = '1' then Q01 <= '1'; Q10 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR12 = '1' then Q03 <= '1'; Q01 <= '0'; end if; 
+					if TR13 = '1' then Q05 <= '1'; Q03 <= '0'; end if;
+					if TR14 = '1' then Q07 <= '1'; Q05 <= '0'; end if;
+					if TR15 = '1' then Q08 <= '1'; Q07 <= '0'; end if;
+					if TR16 = '1' then Q13 <= '1'; Q07 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR17 = '1' then Q01 <= '1'; Q13 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR18 = '1' then Q01 <= '1'; Q05 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR19 = '1' then Q11 <= '1'; Q03 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+					if TR20 = '1' then Q01 <= '1'; Q11 <= '0'; CT2 <= 0; FT2 <= '0'; end if;
+
+					if Q02 = '1' then CT2 <= CT2 + 1; end if;
+					if Q03 = '1' then CT2 <= CT2 + 1; end if;
+					if Q04 = '1' then CT2 <= CT2 + 1; end if;
+					if Q05 = '1' then CT2 <= CT2 + 1; end if;
+					if Q06 = '1' then CT2 <= CT2 + 1; end if;
+					if Q07 = '1' then CT2 <= CT2 + 1; end if;
+					
 					if CT2 > 6 then FT2 <= '1'; else FT2 <= '0'; end if; --Se consideran 4 bit-time, 1 seg
 				end if;
 		end process;
