@@ -2,15 +2,15 @@
    ./TestTP1_2_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  54008
+     -ipcport  54156
 
-Wed Oct 02 16:16:11 2019
+Wed Oct 02 17:28:28 2019
 
-Total Line Count : 225
+Total Line Count : 203
 
- Elaboration time : 0 sec.
+ Elaboration time : 0.015625 sec.
 
- Estimate current memory usage : 157.991 Meg. 
+ Estimate current memory usage : 157.934 Meg. 
 
  Total Signals          : 46
  Total Nets             : 41
@@ -20,36 +20,36 @@ Total Line Count : 225
  Total Processes        : 26
  Total Traceable Variables  : 0
  Total Scalar Nets and Variables : 41
+ntrace select -o on -n /TestTP1_2/clk 
 ntrace select -o on -n /TestTP1_2/l 
 ntrace select -o on -n /TestTP1_2/p1 
 ntrace select -o on -n /TestTP1_2/p2 
-ntrace select -o on -n /TestTP1_2/clk 
-ntrace select -o on -n /TestTP1_2/r 
+ntrace select -o on -n /TestTP1_2/UUT/cuenta 
+ntrace select -o on -n /TestTP1_2/UUT/ct2 
+ntrace select -o on -n /TestTP1_2/UUT/q02 
+ntrace select -o on -n /TestTP1_2/UUT/q10 
+ntrace select -o on -n /TestTP1_2/UUT/q04 
+ntrace select -o on -n /TestTP1_2/UUT/q06 
+ntrace select -o on -n /TestTP1_2/UUT/q08 
+ntrace select -o on -n /TestTP1_2/UUT/q09 
+ntrace select -o on -n /TestTP1_2/UUT/q01 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-isimrun 20 sec 
-isimrun 20 sec 
-isimrun 20 sec 
-isimrun 20 sec 
 restart
-isimrun 20 sec 
+isimrun 15 sec 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+isimrun 5 sec 
 restart
-isimrun 20 sec 
+isimrun 5 sec 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-restart
-isimrun 20 sec 
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-restart
-isimrun 20 sec 
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-restart
-isimrun 20 sec 
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
+
+ Simulation time 0.078125 sec.
+
+ Estimate current memory usage : 163.57 Meg. 
+
+Wed Oct 02 17:30:24 2019
+

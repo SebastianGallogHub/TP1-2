@@ -1,10 +1,5 @@
 run 1000 ns
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
-run 20 sec
+run 15 sec
+run 5 sec
+run 5 sec
+exit

@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TestTP1_2.vhw
--- /___/   /\     Timestamp : Wed Oct 02 16:14:53 2019
+-- /___/   /\     Timestamp : Wed Oct 02 17:30:18 2019
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -46,7 +46,7 @@ ARCHITECTURE testbench_arch OF TestTP1_2 IS
     SIGNAL Clk : std_logic := '0';
     SIGNAL R : std_logic := '0';
 
-    constant PERIOD : time := 500 ms;
+    constant PERIOD : time := 250 ms;
     constant DUTY_CYCLE : real := 0.5;
     constant OFFSET : time := 1 ms;
 
@@ -77,91 +77,43 @@ ARCHITECTURE testbench_arch OF TestTP1_2 IS
                 WAIT FOR 1 ms;
                 R <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  250ms
-                WAIT FOR 249 ms;
+                -- -------------  Current Time:  125ms
+                WAIT FOR 124 ms;
                 R <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1250ms
-                WAIT FOR 1000 ms;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  1750ms
-                WAIT FOR 500 ms;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  2250ms
-                WAIT FOR 500 ms;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  2750ms
-                WAIT FOR 500 ms;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  3750ms
-                WAIT FOR 1000 ms;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  4250ms
-                WAIT FOR 500 ms;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  6750ms
-                WAIT FOR 2500 ms;
+                -- -------------  Current Time:  375ms
+                WAIT FOR 250 ms;
                 P1 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  7250ms
-                WAIT FOR 500 ms;
+                -- -------------  Current Time:  625ms
+                WAIT FOR 250 ms;
                 P1 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  9750ms
-                WAIT FOR 2500 ms;
-                P1 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  10250ms
-                WAIT FOR 500 ms;
-                P1 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  10750ms
-                WAIT FOR 500 ms;
-                P1 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  11250ms
-                WAIT FOR 500 ms;
-                P1 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  13750ms
-                WAIT FOR 2500 ms;
+                -- -------------  Current Time:  875ms
+                WAIT FOR 250 ms;
                 P2 <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  14250ms
+                -- -------------  Current Time:  1125ms
+                WAIT FOR 250 ms;
+                P2 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1375ms
+                WAIT FOR 250 ms;
+                P1 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1625ms
+                WAIT FOR 250 ms;
+                P1 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2375ms
+                WAIT FOR 750 ms;
+                P2 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2875ms
                 WAIT FOR 500 ms;
                 P2 <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  15250ms
-                WAIT FOR 1000 ms;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  15750ms
-                WAIT FOR 500 ms;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  16250ms
-                WAIT FOR 500 ms;
-                P2 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  16750ms
-                WAIT FOR 500 ms;
-                P2 <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  17750ms
-                WAIT FOR 1000 ms;
-                P1 <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  18250ms
-                WAIT FOR 500 ms;
-                P1 <= '0';
-                -- -------------------------------------
-                WAIT FOR 2250 ms;
+                WAIT FOR 2375 ms;
 
             END PROCESS;
 

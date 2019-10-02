@@ -765,17 +765,14 @@ proc restore { { project_dir "" } } {
 
   set user_files { 
       "TP1_2.vhd" 
-      "TestTP1_2.tbw" 
-      "TestTP1_2v2.tbw" 
-      "TestTP1_2v3.tbw"}
+      "TestTP1_2.tbw"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files
   } "A problem occured while restoring user files."
 
   set imported_files { 
-      "TestTP1_2.xwv" 
-      "TestTP1_2v2.xwv"}
+      "TestTP1_2.xwv"}
 
   set origination 2
 
@@ -798,6 +795,7 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROP_CompxlibSimPrimatives" "true" 
       "A" "" "" "" "PROP_CompxlibXlnxCoreLib" "true" 
       "A" "" "" "" "PROP_CurrentFloorplanFile" "" 
+      "A" "" "" "" "PROP_DefaultTBName" "Default" 
       "A" "" "" "" "PROP_DesignName" "TP1_2" 
       "A" "" "" "" "PROP_Dummy" "dum1" 
       "A" "" "" "" "PROP_EnableWYSIWYG" "None" 

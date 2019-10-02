@@ -1,3 +1,4 @@
 run 1000 ns
-run 20 sec
+run 15 sec
+run 15 sec
 exit

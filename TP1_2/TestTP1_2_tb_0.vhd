@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
---  /   /         Filename : TestTP1_2_selfcheck.ant
--- /___/   /\     Timestamp : Wed Oct 02 16:59:29 2019
+--  /   /         Filename : TestTP1_2.vhw
+-- /___/   /\     Timestamp : Wed Oct 02 16:14:53 2019
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TestTP1_2_selfcheck
+--Design Name: TestTP1_2_tb_0
 --Device: Xilinx
 --
 
@@ -24,11 +24,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TestTP1_2_selfcheck IS
-END TestTP1_2_selfcheck;
+ENTITY TestTP1_2_tb_0 IS
+END TestTP1_2_tb_0;
 
-ARCHITECTURE testbench_arch OF TestTP1_2_selfcheck IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "D:\3.Facultad\3ero\Sistemas Digitales I\TP\TP1-2\TP1_2\TestTP1_2_selfcheck.ano";
+ARCHITECTURE testbench_arch OF TestTP1_2_tb_0 IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "results.txt";
 
     COMPONENT TP1_2
         PORT (
@@ -40,14 +40,11 @@ ARCHITECTURE testbench_arch OF TestTP1_2_selfcheck IS
         );
     END COMPONENT;
 
-    SIGNAL L : std_logic := 'U';
+    SIGNAL L : std_logic := '0';
     SIGNAL P1 : std_logic := '0';
     SIGNAL P2 : std_logic := '0';
     SIGNAL Clk : std_logic := '0';
     SIGNAL R : std_logic := '0';
-
-    SHARED VARIABLE TX_ERROR : INTEGER := 0;
-    SHARED VARIABLE TX_OUT : LINE;
 
     constant PERIOD : time := 500 ms;
     constant DUTY_CYCLE : real := 0.5;
@@ -72,39 +69,6 @@ ARCHITECTURE testbench_arch OF TestTP1_2_selfcheck IS
                 Clk <= '1';
                 WAIT FOR (PERIOD * DUTY_CYCLE);
             END LOOP CLOCK_LOOP;
-        END PROCESS;
-
-        PROCESS    -- Annotation process for Clk
-            VARIABLE TX_TIME : INTEGER := 0;
-
-            PROCEDURE ANNOTATE_L(
-                TX_TIME : INTEGER
-            ) IS
-                VARIABLE TX_STR : String(1 to 4096);
-                VARIABLE TX_LOC : LINE;
-            BEGIN
-                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
-                STD.TEXTIO.write(TX_LOC, TX_TIME);
-                STD.TEXTIO.write(TX_LOC, string'(", L, "));
-                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, L);
-                STD.TEXTIO.write(TX_LOC, string'("]"));
-                TX_STR(TX_LOC.all'range) := TX_LOC.all;
-                STD.TEXTIO.writeline(RESULTS, TX_LOC);
-                STD.TEXTIO.Deallocate(TX_LOC);
-            END;
-        BEGIN
-            WAIT for 1 fs;
-            ANNOTATE_L(0);
-            WAIT for OFFSET;
-            TX_TIME := TX_TIME + 1;
-            ANNO_LOOP : LOOP
-                --Rising Edge
-                WAIT for 251 ms;
-                TX_TIME := TX_TIME + 251;
-                ANNOTATE_L(TX_TIME);
-                WAIT for 249 ms;
-                TX_TIME := TX_TIME + 249;
-            END LOOP ANNO_LOOP;
         END PROCESS;
 
         PROCESS
@@ -199,11 +163,6 @@ ARCHITECTURE testbench_arch OF TestTP1_2_selfcheck IS
                 -- -------------------------------------
                 WAIT FOR 2250 ms;
 
-                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
-                STD.TEXTIO.writeline(RESULTS, TX_OUT);
-                ASSERT (FALSE) REPORT
-                    "Success! Simulation for annotation completed"
-                    SEVERITY FAILURE;
             END PROCESS;
 
     END testbench_arch;

@@ -53,7 +53,7 @@ architecture Behavioral of TP1_2 is
 		TR06 <= Q09 and (not P1) and (not P2); 
 		TR07 <= Q06 and FT2;
 		TR08 <= Q12 and (not P1);
-		TR09 <= Q04 and FT2;
+		TR09 <= Q04 and FT2 and (not (P1 or P2));
 		TR10 <= Q02 and FT2;
 		TR11 <= Q10 and (not P1);
 		TR12 <= Q01 and P2 and (not P1);
@@ -62,7 +62,7 @@ architecture Behavioral of TP1_2 is
 		TR15 <= Q07 and (not P2);
 		TR16 <= Q07 and FT2;
 		TR17 <= Q13 and (not P2);
-		TR18 <= Q05 and FT2;
+		TR18 <= Q05 and FT2 and (not (P1 or P2));
 		TR19 <= Q03 and FT2;
 		TR20 <= Q11 and (not P2);
 
@@ -72,26 +72,26 @@ architecture Behavioral of TP1_2 is
 				Q01 <= '1'; Q02 <= '0'; Q03 <= '0'; Q04 <= '0'; Q05 <= '0'; Q06 <= '0'; Q07 <= '0';
 				Q08 <= '0'; Q09 <= '0'; Q10 <= '0'; Q11 <= '0'; Q12 <= '0'; Q13 <= '0';
 			elsif (Clk = '1' and Clk'event) then 
-				if TR01 = '1' then Q02 <= '1'; Q01 <= '0'; end if;
-				if TR02 = '1' then Q04 <= '1'; Q02 <= '0'; end if;
-				if TR03 = '1' then Q06 <= '1'; Q04 <= '0'; end if;
-				if TR04 = '1' then Q08 <= '1'; Q06 <= '0'; end if;
-				if TR05 = '1' then Q09 <= '1'; Q08 <= '0'; end if;
-				if TR06 = '1' then Q01 <= '1'; Q09 <= '0'; end if;
-				if TR07 = '1' then Q12 <= '1'; Q06 <= '0'; end if;
-				if TR08 = '1' then Q01 <= '1'; Q12 <= '0'; end if;
-				if TR09 = '1' then Q01 <= '1'; Q04 <= '0'; end if;
-				if TR10 = '1' then Q10 <= '1'; Q02 <= '0'; end if;
-				if TR11 = '1' then Q01 <= '1'; Q10 <= '0'; end if;
-				if TR12 = '1' then Q03 <= '1'; Q01 <= '0'; end if; 
-				if TR13 = '1' then Q05 <= '1'; Q03 <= '0'; end if;
-				if TR14 = '1' then Q07 <= '1'; Q05 <= '0'; end if;
-				if TR15 = '1' then Q08 <= '1'; Q07 <= '0'; end if;
-				if TR16 = '1' then Q13 <= '1'; Q07 <= '0'; end if;
-				if TR17 = '1' then Q01 <= '1'; Q13 <= '0'; end if;
-				if TR18 = '1' then Q01 <= '1'; Q05 <= '0'; end if;
-				if TR19 = '1' then Q11 <= '1'; Q03 <= '0'; end if;
-				if TR20 = '1' then Q01 <= '1'; Q11 <= '0'; end if;
+				if TR01 = '1' then Q01 <= '0'; Q02 <= '1'; end if;
+				if TR02 = '1' then Q02 <= '0'; Q04 <= '1'; end if;
+				if TR03 = '1' then Q04 <= '0'; Q06 <= '1'; end if;
+				if TR04 = '1' then Q06 <= '0'; Q08 <= '1'; end if;
+				if TR05 = '1' then Q08 <= '0'; Q09 <= '1'; end if;
+				if TR06 = '1' then Q09 <= '0'; Q01 <= '1'; end if;
+				if TR07 = '1' then Q06 <= '0'; Q12 <= '1'; end if;
+				if TR08 = '1' then Q12 <= '0'; Q01 <= '1'; end if;
+				if TR09 = '1' then Q04 <= '0'; Q01 <= '1'; end if;
+				if TR10 = '1' then Q02 <= '0'; Q10 <= '1'; end if;
+				if TR11 = '1' then Q10 <= '0'; Q01 <= '1'; end if;
+				if TR12 = '1' then Q01 <= '0'; Q03 <= '1'; end if; 
+				if TR13 = '1' then Q03 <= '0'; Q05 <= '1'; end if;
+				if TR14 = '1' then Q05 <= '0'; Q07 <= '1'; end if;
+				if TR15 = '1' then Q07 <= '0'; Q08 <= '1'; end if;
+				if TR16 = '1' then Q07 <= '0'; Q13 <= '1'; end if;
+				if TR17 = '1' then Q13 <= '0'; Q01 <= '1'; end if;
+				if TR18 = '1' then Q05 <= '0'; Q01 <= '1'; end if;
+				if TR19 = '1' then Q03 <= '0'; Q11 <= '1'; end if;
+				if TR20 = '1' then Q11 <= '0'; Q01 <= '1'; end if;
 			end if;
 		end process;
 		
@@ -101,16 +101,16 @@ architecture Behavioral of TP1_2 is
 		process (R, Clk)
 		begin
 			if R = '1' then 
-				FT2 <= '0';
+				cuenta <= 0; FT2 <= '0'; 
 			elsif (Clk'event and Clk = '1') then 
 				if CT2 = '1' then 
-					if cuenta < 2 then --Se consideran 2 bit-time, 1 seg
-						cuenta <= cuenta +1; FT2 <= '0';
+					if cuenta < 8 then --Se consideran 4 bit-time, 1 seg
+						cuenta <= cuenta + 1; FT2 <= '0';
 					else
 						FT2 <= '1';
 					end if;
 				else 
-					cuenta <= 0;
+					cuenta <= 0; FT2 <= '0';
 				end if;
 			end if;
 		end process;
