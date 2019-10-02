@@ -1,14 +1,14 @@
 V3 11
 FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.ant" 2019/09/28.17:02:29 J.36
-FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" 2019/10/01.20:11:05 J.36
-EN work/TestTP1_2 1569971469 \
+FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" 2019/10/02.16:14:53 J.36
+EN work/TestTP1_2 1570043769 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" \
       PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
       PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
       PB std/textio 1179176969
-AR work/TestTP1_2/testbench_arch 1569971470 \
+AR work/TestTP1_2/testbench_arch 1570043770 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2.vhw" \
-      EN work/TestTP1_2 1569971469 CP TP1_2
+      EN work/TestTP1_2 1570043769 CP TP1_2
 FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2v2.vhw" 2019/10/01.18:32:27 J.36
 EN work/TestTP1_2v2 1569965550 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2v2.vhw" \
@@ -18,11 +18,11 @@ EN work/TestTP1_2v2 1569965550 \
 AR work/TestTP1_2v2/testbench_arch 1569965551 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TestTP1_2v2.vhw" \
       EN work/TestTP1_2v2 1569965550 CP TP1_2
-FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/10/01.20:08:58 J.36
-EN work/TP1_2 1569971413 \
+FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" 2019/10/02.16:15:57 J.36
+EN work/TP1_2 1570043767 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
       PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
       PB ieee/STD_LOGIC_UNSIGNED 1179176991
-AR work/TP1_2/Behavioral 1569971414 \
+AR work/TP1_2/Behavioral 1570043768 \
       FL "D:/3.Facultad/3ero/Sistemas Digitales I/TP/TP1-2/TP1_2/TP1_2.vhd" \
-      EN work/TP1_2 1569971413
+      EN work/TP1_2 1570043767

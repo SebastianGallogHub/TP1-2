@@ -24,11 +24,12 @@ public:
 
     HSim__s1 SE[5];
 
-    HSim__s1 SA[35];
+    HSim__s1 SA[36];
   char t0;
   char t1;
   char t2;
   char t3;
+  char t4;
     Work_tp1_2_behavioral(const char * name);
     ~Work_tp1_2_behavioral();
     void constructObject();
